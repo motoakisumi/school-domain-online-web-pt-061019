@@ -25,6 +25,8 @@ class School
   def sort
     # key doesn't need to sorted
     # @roster = @roster.sort_by{|age, name| age}.to_h
+    sorted_hash = {}
+
     @roster.collect do |age, names|
       
       #names.sort! do |a, b|
@@ -32,8 +34,7 @@ class School
       # end
       
       #names.sort!
-    sorted_hash = {}
-    @roster.collect do |age, names|
+    
       sorted_hash[age] = names.sort
     end
     sorted_hash
