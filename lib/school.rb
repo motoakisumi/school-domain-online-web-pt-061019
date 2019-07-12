@@ -27,7 +27,7 @@ class School
     # @roster = @roster.sort_by{|age, name| age}.to_h
     sorted_hash = {}
 
-    @roster.collect do |age, names|
+    @roster.each do |age, names|
       
       #names.sort! do |a, b|
       #   a <=> b
