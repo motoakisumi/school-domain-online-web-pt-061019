@@ -27,11 +27,11 @@ class School
     # @roster = @roster.sort_by{|age, name| age}.to_h
     @roster.collect do |age, names|
       #names.sort! do |a, b|
-      #  a <=> b
+      #   a <=> b
+      # end
       
       names.sort!
       
-      end
     end
     @roster
   end
