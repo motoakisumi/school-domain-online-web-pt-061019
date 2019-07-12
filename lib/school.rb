@@ -32,10 +32,11 @@ class School
       # end
       
       #names.sort!
-    @sorted_hash = {}
+    sorted_hash = {}
     @roster.collect do |age, names|
-      @sorted_hash[age] = names.sort
+      sorted_hash[age] = names.sort
     end
+    sorted_hash
     
     end
     @roster
