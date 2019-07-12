@@ -7,17 +7,13 @@ class School
     @name = name
     @roster = {}
   end
-
-  #def roster
-  #  @hash
-  #end
   
   def add_student(student, age)
     if @roster[age] != nil
       @roster[age] << student
     else
-      @hash[age] = []
-      @hash[age] << student
+      @roster[age] = []
+      @roster[age] << student
     end
     
   end
