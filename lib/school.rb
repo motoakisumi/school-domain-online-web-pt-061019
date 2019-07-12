@@ -1,21 +1,20 @@
 # code here!
 class School
   
-  attr_accessor :roster
-  attr_reader :name
+  attr_reader :name, :roster
   
   def initialize(name)
     @name = name
-    @hash = {}
+    @roster = {}
   end
 
-  def roster
-    @hash
-  end
+  #def roster
+  #  @hash
+  #end
   
   def add_student(student, age)
-    if @hash[age] != nil
-      @hash[age] << student
+    if @roster[age] != nil
+      @roster[age] << student
     else
       @hash[age] = []
       @hash[age] << student
@@ -24,17 +23,17 @@ class School
   end
   
   def grade(grade)
-    @hash[grade]
+    @roster[grade]
   end
   
   def sort
     
-    @hash = @hash.sort_by{|age, name| age}.to_h
-    @hash.collect do |age, names|
+    @roster = @roster.sort_by{|age, name| age}.to_h
+    @roster.collect do |age, names|
       names.sort! do |a, b|
         a <=> b
       end
     end
-    @hash
+    @roster
   end
 end
