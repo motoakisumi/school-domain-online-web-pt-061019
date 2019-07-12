@@ -38,7 +38,5 @@ class School
     end
     sorted_hash
     
-    end
-    @roster
   end
 end
