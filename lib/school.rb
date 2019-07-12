@@ -23,11 +23,14 @@ class School
   end
   
   def sort
-    
-    @roster = @roster.sort_by{|age, name| age}.to_h
+    # key doesn't need to sorted
+    # @roster = @roster.sort_by{|age, name| age}.to_h
     @roster.collect do |age, names|
-      names.sort! do |a, b|
-        a <=> b
+      #names.sort! do |a, b|
+      #  a <=> b
+      
+      names.sort!
+      
       end
     end
     @roster
