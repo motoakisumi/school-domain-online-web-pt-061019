@@ -2,6 +2,7 @@
 class School
   
   attr_reader :name, :roster
+  attr_accessor :roster
   
   def initialize(name)
     @name = name
@@ -33,6 +34,7 @@ class School
       #   a <=> b
       # end
       
+      # different way to do this but you don't want to change the original value
       #names.sort!
     
       sorted_hash[age] = names.sort
